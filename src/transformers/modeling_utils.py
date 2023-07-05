@@ -2190,6 +2190,9 @@ class PreTrainedModel(nn.Module, ModuleUtilsMixin, GenerationMixin, PushToHubMix
         commit_hash = kwargs.pop("_commit_hash", None)
         variant = kwargs.pop("variant", None)
 
+        # This should be a callable of with one argument `state_dict`
+        preprocess_state_dict_fn = kwargs.pop("preprocess_state_dict_fn", None)
+
         if use_auth_token is not None:
             warnings.warn(
                 "The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.", FutureWarning
@@ -2893,6 +2896,10 @@ class PreTrainedModel(nn.Module, ModuleUtilsMixin, GenerationMixin, PushToHubMix
             # restore default dtype
             if dtype_orig is not None:
                 torch.set_default_dtype(dtype_orig)
+
+            # TODO: add comments
+            if preprocess_state_dict_fn is not None:
+                state_dict = preprocess_state_dict_fn(state_dict)
 
             (
                 model,
