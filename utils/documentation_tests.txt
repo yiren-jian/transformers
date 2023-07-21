@@ -249,7 +249,6 @@ src/transformers/models/levit/configuration_levit.py
 src/transformers/models/levit/feature_extraction_levit.py
 src/transformers/models/levit/image_processing_levit.py
 src/transformers/models/lilt/modeling_lilt.py
-src/transformers/models/llama/tokenization_llama.py
 src/transformers/models/longformer/modeling_longformer.py
 src/transformers/models/longformer/modeling_tf_longformer.py
 src/transformers/models/longformer/tokenization_longformer.py
