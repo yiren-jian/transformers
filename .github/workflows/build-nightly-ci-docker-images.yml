@@ -30,7 +30,6 @@ jobs:
       - name: Cleanup disk more
         run: |
           sudo df -h
-          sudo swapoff /swapfile || true
           sudo apt purge aria2 ansible azure-cli shellcheck rpm xorriso zsync \
             clang-6.0 lldb-6.0 lld-6.0 clang-format-6.0 clang-8 lldb-8 lld-8 clang-format-8 \
             clang-9 lldb-9 lld-9 clangd-9 clang-format-9 dotnet-sdk-3.0 dotnet-sdk-3.1=3.1.101-1 \
@@ -82,6 +81,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: show disk
+        run: |
+          sudo df -h
       -
         name: Build and push
         uses: docker/build-push-action@v3
@@ -92,3 +94,6 @@ jobs:
             PYTORCH=pre
           push: true
           tags: huggingface/transformers-all-latest-torch-nightly-gpu
+      - name: show disk
+        run: |
+          sudo df -h
