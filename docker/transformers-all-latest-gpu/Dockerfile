@@ -33,17 +33,17 @@ RUN echo torch=$VERSION
 RUN [ "$PYTORCH" != "pre" ] && python3 -m pip install --no-cache-dir -U $VERSION torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/$CUDA || python3 -m pip install --no-cache-dir -U --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/$CUDA
 #
 RUN python3 -m pip install --no-cache-dir -U tensorflow==2.12 protobuf==3.20.3 tensorflow_text tensorflow_probability
-#RUN python3 -m pip uninstall -y flax jax
-#
-#RUN python3 -m pip install --no-cache-dir intel_extension_for_pytorch==$INTEL_TORCH_EXT+cpu -f https://developer.intel.com/ipex-whl-stable-cpu
-#
-#RUN python3 -m pip install --no-cache-dir git+https://github.com/facebookresearch/detectron2.git pytesseract
-#RUN python3 -m pip install -U "itsdangerous<2.1.0"
-#
-#RUN python3 -m pip install --no-cache-dir git+https://github.com/huggingface/accelerate@main#egg=accelerate
-#
-## Add bitsandbytes for mixed int8 testing
-#RUN python3 -m pip install --no-cache-dir bitsandbytes
+RUN python3 -m pip uninstall -y flax jax
+
+RUN python3 -m pip install --no-cache-dir intel_extension_for_pytorch==$INTEL_TORCH_EXT+cpu -f https://developer.intel.com/ipex-whl-stable-cpu
+
+RUN python3 -m pip install --no-cache-dir git+https://github.com/facebookresearch/detectron2.git pytesseract
+RUN python3 -m pip install -U "itsdangerous<2.1.0"
+
+RUN python3 -m pip install --no-cache-dir git+https://github.com/huggingface/accelerate@main#egg=accelerate
+
+# Add bitsandbytes for mixed int8 testing
+RUN python3 -m pip install --no-cache-dir bitsandbytes
 #
 ## For bettertransformer
 #RUN python3 -m pip install --no-cache-dir optimum
