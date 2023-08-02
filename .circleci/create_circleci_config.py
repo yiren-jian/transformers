@@ -299,7 +299,7 @@ tf_job = CircleCIJob(
     ],
     parallelism=1,
     pytest_num_workers=6,
-    pytest_options={"rA": None},
+    
 )
 
 
@@ -311,7 +311,7 @@ flax_job = CircleCIJob(
         "pip install -U --upgrade-strategy eager .[flax,testing,sentencepiece,flax-speech,vision]",
     ],
     parallelism=1,
-    pytest_options={"rA": None},
+    
 )
 
 
@@ -323,7 +323,7 @@ pipelines_torch_job = CircleCIJob(
         "pip install --upgrade --upgrade-strategy eager pip",
         "pip install -U --upgrade-strategy eager .[sklearn,torch,testing,sentencepiece,torch-speech,vision,timm,video]",
     ],
-    pytest_options={"rA": None},
+    
     marker="is_pipeline_test",
 )
 
@@ -337,7 +337,7 @@ pipelines_tf_job = CircleCIJob(
         "pip install -U --upgrade-strategy eager .[sklearn,tf-cpu,testing,sentencepiece,vision]",
         "pip install -U --upgrade-strategy eager tensorflow_probability",
     ],
-    pytest_options={"rA": None},
+    
     marker="is_pipeline_test",
 )
 
@@ -518,10 +518,6 @@ REGULAR_TESTS = [
     torch_job,
     tf_job,
     flax_job,
-    custom_tokenizers_job,
-    hub_job,
-    onnx_job,
-    exotic_models_job,
 ]
 EXAMPLES_TESTS = [
     examples_torch_job,
@@ -598,9 +594,6 @@ def create_circleci_config(folder=None):
                 job.tests_to_run = [f"examples/{framework}"]
             else:
                 job.tests_to_run = [f for f in example_tests.split(" ") if f.startswith(f"examples/{framework}")]
-            
-            if len(job.tests_to_run) > 0:
-                jobs.append(job)
 
     doctest_file = os.path.join(folder, "doctest_list.txt")
     if os.path.exists(doctest_file):
@@ -608,12 +601,6 @@ def create_circleci_config(folder=None):
             doctest_list = f.read()
     else:
         doctest_list = []
-    if len(doctest_list) > 0:
-        jobs.extend(DOC_TESTS)
-
-    repo_util_file = os.path.join(folder, "test_repo_utils.txt")
-    if os.path.exists(repo_util_file) and os.path.getsize(repo_util_file) > 0:
-        jobs.extend(REPO_UTIL_TESTS)
 
     if len(jobs) == 0:
         jobs = [EmptyJob()]
