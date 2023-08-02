@@ -55,7 +55,7 @@ class Mask2FormerModelTester:
         num_labels=4,
         hidden_dim=64,
         num_attention_heads=4,
-        num_hidden_layers=2,
+        num_hidden_layers=3,
     ):
         self.parent = parent
         self.batch_size = batch_size
@@ -95,8 +95,8 @@ class Mask2FormerModelTester:
             dim_feedforward=32,
             num_queries=self.num_queries,
             num_labels=self.num_labels,
-            decoder_layers=2,
-            encoder_layers=2,
+            decoder_layers=3,
+            encoder_layers=3,
             feature_size=16,
         )
         config.num_queries = self.num_queries

@@ -116,8 +116,8 @@ class OneFormerModelTester:
             num_labels=self.num_labels,
             encoder_feedforward_dim=32,
             dim_feedforward=64,
-            encoder_layers=2,
-            decoder_layers=2,
+            encoder_layers=3,
+            decoder_layers=3,
         )
 
         config.backbone_config.embed_dim = 16

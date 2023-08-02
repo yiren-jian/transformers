@@ -52,7 +52,7 @@ class TransfoXLModelTester:
         d_head=8,
         d_inner=128,
         div_val=2,
-        num_hidden_layers=2,
+        num_hidden_layers=3,
         scope=None,
         seed=1,
         eos_token_id=0,

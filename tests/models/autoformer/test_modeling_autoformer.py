@@ -52,7 +52,7 @@ class AutoformerModelTester:
         num_time_features=4,
         is_training=True,
         hidden_size=16,
-        num_hidden_layers=2,
+        num_hidden_layers=3,
         num_attention_heads=4,
         intermediate_size=4,
         hidden_act="gelu",
