@@ -54,7 +54,7 @@ class GraphormerModelTester:
         init_fn=None,
         max_nodes=32,
         share_input_output_embed=False,
-        num_hidden_layers=3,
+        num_hidden_layers=2,
         embedding_dim=32,
         ffn_embedding_dim=32,
         num_attention_heads=4,

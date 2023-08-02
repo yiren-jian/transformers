@@ -55,7 +55,7 @@ class MaskFormerModelTester:
         max_size=32 * 6,
         num_labels=4,
         mask_feature_size=32,
-        num_hidden_layers=3,
+        num_hidden_layers=2,
         num_attention_heads=2,
     ):
         self.parent = parent

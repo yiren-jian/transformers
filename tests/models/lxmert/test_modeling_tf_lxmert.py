@@ -55,7 +55,7 @@ class TFLxmertModelTester(object):
         num_object_labels=16,
         num_attr_labels=4,
         num_visual_features=10,
-        l_layers=3,
+        l_layers=2,
         x_layers=1,
         r_layers=1,
         visual_feat_dim=128,

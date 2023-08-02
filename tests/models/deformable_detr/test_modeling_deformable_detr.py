@@ -57,7 +57,7 @@ class DeformableDetrModelTester:
         is_training=True,
         use_labels=True,
         hidden_size=32,
-        num_hidden_layers=3,
+        num_hidden_layers=2,
         num_attention_heads=8,
         intermediate_size=4,
         hidden_act="gelu",

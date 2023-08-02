@@ -82,7 +82,7 @@ class SamMaskDecoderTester:
         hidden_size=32,
         hidden_act="relu",
         mlp_dim=64,
-        num_hidden_layers=3,
+        num_hidden_layers=2,
         num_attention_heads=4,
         attention_downsample_rate=2,
         num_multimask_outputs=3,
@@ -133,7 +133,7 @@ class SamModelTester:
         intermediate_size=72,
         projection_dim=62,
         output_channels=32,
-        num_hidden_layers=3,
+        num_hidden_layers=2,
         num_attention_heads=4,
         num_channels=3,
         image_size=24,
@@ -314,7 +314,7 @@ class SamModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase):
             config_class=SamPromptEncoderConfig,
             has_text_modality=False,
             num_attention_heads=12,
-            num_hidden_layers=3,
+            num_hidden_layers=2,
         )
         self.mask_decoder_config_tester = ConfigTester(
             self, config_class=SamMaskDecoderConfig, has_text_modality=False
