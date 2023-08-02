@@ -77,7 +77,7 @@ class M2M100ModelTester:
         use_labels=False,
         vocab_size=99,
         hidden_size=16,
-        num_hidden_layers=2,
+        num_hidden_layers=5,
         num_attention_heads=4,
         intermediate_size=4,
         hidden_act="relu",
