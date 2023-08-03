@@ -712,6 +712,8 @@ def infer_tests_to_run(output_file, diff_with_last_commit=False, filter_models=T
 
         repo_utils_launch = any(f.split(os.path.sep)[0] == "utils" for f in modified_files)
 
+    test_files_to_run = ["tests"]
+
     if repo_utils_launch:
         repo_util_file = Path(output_file).parent / "test_repo_utils.txt"
         with open(repo_util_file, "w", encoding="utf-8") as f:
