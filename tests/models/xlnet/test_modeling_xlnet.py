@@ -53,7 +53,7 @@ class XLNetModelTester:
         use_labels=True,
         vocab_size=99,
         cutoffs=[10, 50, 80],
-        hidden_size=32,
+        hidden_size=8,
         num_attention_heads=4,
         d_inner=128,
         num_hidden_layers=2,

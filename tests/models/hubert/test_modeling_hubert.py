@@ -61,7 +61,7 @@ class HubertModelTester:
         batch_size=13,
         seq_length=1024,  # speech is longer
         is_training=False,
-        hidden_size=16,
+        hidden_size=8,
         feat_extract_norm="group",
         feat_extract_dropout=0.0,
         feat_extract_activation="gelu",

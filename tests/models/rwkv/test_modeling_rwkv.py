@@ -51,7 +51,7 @@ class RwkvModelTester:
         use_labels=True,
         use_mc_token_ids=True,
         vocab_size=99,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         intermediate_size=37,
         hidden_act="gelu",

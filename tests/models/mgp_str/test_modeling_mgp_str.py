@@ -54,7 +54,7 @@ class MgpstrModelTester:
         num_character_labels=38,
         num_bpe_labels=99,
         num_wordpiece_labels=99,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         mlp_ratio=4.0,

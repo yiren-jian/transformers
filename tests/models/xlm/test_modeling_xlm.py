@@ -56,7 +56,7 @@ class XLMModelTester:
         n_langs=2,
         vocab_size=99,
         n_special=0,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         hidden_dropout_prob=0.1,

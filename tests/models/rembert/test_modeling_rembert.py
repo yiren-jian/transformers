@@ -52,7 +52,7 @@ class RemBertModelTester:
         use_token_type_ids=True,
         use_labels=True,
         vocab_size=99,
-        hidden_size=32,
+        hidden_size=8,
         input_embedding_size=18,
         output_embedding_size=43,
         num_hidden_layers=2,

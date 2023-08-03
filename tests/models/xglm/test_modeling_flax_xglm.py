@@ -52,7 +52,7 @@ class FlaxXGLMModelTester:
         use_input_mask=True,
         use_labels=True,
         vocab_size=99,
-        d_model=32,
+        d_model=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         ffn_dim=37,

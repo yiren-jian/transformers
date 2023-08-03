@@ -54,7 +54,7 @@ class FSMTModelTester:
         seq_length=7,
         is_training=False,
         use_labels=False,
-        hidden_size=16,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         intermediate_size=4,

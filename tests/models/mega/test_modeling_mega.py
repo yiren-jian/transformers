@@ -50,7 +50,7 @@ class MegaModelTester:
         use_input_mask=True,
         use_labels=True,
         vocab_size=99,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         intermediate_size=37,
         hidden_dropout_prob=0.1,

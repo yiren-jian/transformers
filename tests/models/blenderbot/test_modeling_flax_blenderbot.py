@@ -80,7 +80,7 @@ class FlaxBlenderbotModelTester:
         is_training=True,
         use_labels=False,
         vocab_size=99,
-        hidden_size=16,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         intermediate_size=4,

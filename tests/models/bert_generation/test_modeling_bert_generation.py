@@ -40,7 +40,7 @@ class BertGenerationEncoderTester:
         is_training=True,
         use_input_mask=True,
         vocab_size=99,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         intermediate_size=37,

@@ -52,7 +52,7 @@ class DPTModelTester:
         num_channels=3,
         is_training=True,
         use_labels=True,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=4,
         backbone_out_indices=[0, 1, 2, 3],
         num_attention_heads=4,

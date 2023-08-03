@@ -58,7 +58,7 @@ class LongT5ModelTester:
         is_training=True,
         use_attention_mask=True,
         use_labels=True,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         d_ff=37,
@@ -915,7 +915,7 @@ class LongT5EncoderOnlyModelTester:
         global_block_size=3,
         # For common tests
         use_attention_mask=True,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         d_ff=37,

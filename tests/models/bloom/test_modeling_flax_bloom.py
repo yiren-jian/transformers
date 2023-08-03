@@ -51,7 +51,7 @@ class FlaxBloomModelTester:
         is_training=True,
         use_labels=False,
         vocab_size=99,
-        hidden_size=16,
+        hidden_size=8,
         n_layer=2,
         n_head=4,
         hidden_act="gelu",

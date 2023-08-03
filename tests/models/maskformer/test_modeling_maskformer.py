@@ -92,7 +92,7 @@ class MaskFormerModelTester:
             backbone_config=SwinConfig(
                 depths=[1, 1, 1, 1],
                 embed_dim=16,
-                hidden_size=32,
+                hidden_size=8,
                 num_heads=[1, 1, 2, 2],
             ),
             decoder_config=DetrConfig(

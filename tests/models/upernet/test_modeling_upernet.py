@@ -106,7 +106,7 @@ class UperNetModelTester:
     def get_config(self):
         return UperNetConfig(
             backbone_config=self.get_backbone_config(),
-            hidden_size=64,
+            hidden_size=8,
             pool_scales=[1, 2, 3, 6],
             use_auxiliary_head=True,
             auxiliary_loss_weight=0.4,

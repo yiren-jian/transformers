@@ -63,7 +63,7 @@ class UMT5ModelTester:
         is_training=True,
         use_attention_mask=True,
         use_labels=False,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         d_ff=37,

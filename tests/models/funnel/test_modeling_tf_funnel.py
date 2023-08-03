@@ -56,7 +56,7 @@ class TFFunnelModelTester:
         vocab_size=99,
         block_sizes=[1, 1, 2],
         num_decoder_layers=1,
-        d_model=32,
+        d_model=8,
         n_head=4,
         d_head=8,
         d_inner=37,

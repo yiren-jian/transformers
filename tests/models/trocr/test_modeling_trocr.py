@@ -38,7 +38,7 @@ class TrOCRStandaloneDecoderModelTester:
         parent,
         vocab_size=99,
         batch_size=13,
-        d_model=16,
+        d_model=8,
         decoder_seq_length=7,
         is_training=True,
         is_decoder=True,

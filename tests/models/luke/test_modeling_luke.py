@@ -60,7 +60,7 @@ class LukeModelTester:
         vocab_size=99,
         entity_vocab_size=10,
         entity_emb_size=6,
-        hidden_size=32,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         intermediate_size=37,

@@ -67,7 +67,7 @@ class GLPNModelTester:
         hidden_dropout_prob=0.1,
         attention_probs_dropout_prob=0.1,
         initializer_range=0.02,
-        decoder_hidden_size=16,
+        decoder_hidden_size=8,
         num_labels=3,
         scope=None,
     ):

@@ -43,7 +43,7 @@ class GPTSanJapaneseTester:
         num_contexts=7,
         # For common tests
         is_training=True,
-        hidden_size=32,
+        hidden_size=8,
         ext_size=42,
         num_hidden_layers=2,
         num_ext_layers=2,

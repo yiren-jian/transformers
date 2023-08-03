@@ -591,7 +591,7 @@ class Wav2Vec2Speech2Text2(EncoderDecoderMixin, unittest.TestCase):
     def prepare_config_and_inputs(self):
         model_tester_encoder = Wav2Vec2ModelTester(self, batch_size=13)
         model_tester_decoder = Speech2Text2StandaloneDecoderModelTester(
-            self, batch_size=13, d_model=32, max_position_embeddings=512
+            self, batch_size=13, d_model=8, max_position_embeddings=512
         )
         encoder_config_and_inputs = model_tester_encoder.prepare_config_and_inputs()
         decoder_config_and_inputs = model_tester_decoder.prepare_config_and_inputs()

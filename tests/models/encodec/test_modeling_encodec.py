@@ -78,7 +78,7 @@ class EncodecModelTester:
         num_channels=2,
         is_training=False,
         intermediate_size=40,
-        hidden_size=32,
+        hidden_size=8,
         num_filters=8,
         num_residual_layers=1,
         upsampling_ratios=[8, 4],

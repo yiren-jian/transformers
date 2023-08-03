@@ -42,7 +42,7 @@ class AutoformerModelTester:
     def __init__(
         self,
         parent,
-        d_model=16,
+        d_model=8,
         batch_size=13,
         prediction_length=7,
         context_length=14,
@@ -51,7 +51,7 @@ class AutoformerModelTester:
         embedding_dimension=5,
         num_time_features=4,
         is_training=True,
-        hidden_size=16,
+        hidden_size=8,
         num_hidden_layers=2,
         num_attention_heads=4,
         intermediate_size=4,
