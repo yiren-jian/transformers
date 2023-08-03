@@ -79,7 +79,7 @@ class TFBertModelTester:
         self.use_token_type_ids = True
         self.use_labels = True
         self.vocab_size = 99
-        self.hidden_size = 32
+        self.hidden_size = 8
         self.num_hidden_layers = 2
         self.num_attention_heads = 4
         self.intermediate_size = 37
