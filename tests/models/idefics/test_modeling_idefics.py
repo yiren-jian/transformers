@@ -459,7 +459,7 @@ class IdeficsModelIntegrationTest(TestCasePlus):
             ],
         ]
 
-        model = IdeficsForVisionText2Text.from_pretrained("HuggingFaceM4/idefics-9b", torch_dtype=torch.float16, device_map="auto").to(torch_device)
+        model = IdeficsForVisionText2Text.from_pretrained("HuggingFaceM4/idefics-9b", torch_dtype=torch.float16, device_map="auto")
         processor = self.default_processor
         inputs = processor(prompts, return_tensors="pt").to(torch_device)
         generated_ids = model.generate(**inputs, max_length=100)
