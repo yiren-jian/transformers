@@ -1297,7 +1297,7 @@ class GenerationMixin:
                     UserWarning,
                 )
 
-    @torch.no_grad()
+    #@torch.no_grad()
     def generate(
         self,
         inputs: Optional[torch.Tensor] = None,
